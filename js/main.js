@@ -8,6 +8,26 @@ const compressedPreview = document.getElementById('compressedPreview');
 const originalSize = document.getElementById('originalSize');
 const compressedSize = document.getElementById('compressedSize');
 const downloadBtn = document.getElementById('downloadBtn');
+const themeToggle = document.getElementById('themeToggle');
+
+// 主题切换功能
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'light' ? '切换暗色模式' : '切换亮色模式';
+}
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeToggle.textContent = newTheme === 'light' ? '切换暗色模式' : '切换亮色模式';
+});
+
+// 初始化主题
+initTheme();
 
 // 当前处理的图片数据
 let currentFile = null;

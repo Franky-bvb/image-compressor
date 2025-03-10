@@ -5,11 +5,31 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #f5f7fa;
+    --text-color: #333;
+    --card-bg: #fff;
+    --border-color: #4a90e2;
+    --button-bg: #4a90e2;
+    --button-hover: #357abd;
+}
+
+/* 深色模式 */
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --border-color: #4a90e2;
+    --button-bg: #4a90e2;
+    --button-hover: #357abd;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f7fa;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -35,8 +55,8 @@ header p {
 
 /* 上传区域样式 */
 .upload-container {
-    background-color: #fff;
-    border: 2px dashed #4a90e2;
+    background-color: var(--card-bg);
+    border: 2px dashed var(--border-color);
     border-radius: 8px;
     padding: 2rem;
     text-align: center;
@@ -46,7 +66,7 @@ header p {
 }
 
 .upload-container:hover {
-    border-color: #357abd;
+    border-color: var(--button-hover);
     background-color: #f8f9fa;
 }
 
@@ -63,12 +83,12 @@ header p {
 }
 
 .upload-content p {
-    color: #666;
+    color: var(--text-color);
 }
 
 /* 压缩设置样式 */
 .compression-settings {
-    background-color: #fff;
+    background-color: var(--card-bg);
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 2rem;
@@ -91,7 +111,7 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background: #4a90e2;
+    background: var(--button-bg);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -105,7 +125,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .preview-box {
-    background-color: #fff;
+    background-color: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -113,7 +133,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .preview-box h3 {
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: var(--text-color);
 }
 
 .image-container {
@@ -133,7 +153,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .file-info {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--text-color);
 }
 
 /* 下载按钮样式 */
@@ -142,7 +162,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #downloadBtn {
-    background-color: #4a90e2;
+    background-color: var(--button-bg);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -153,7 +173,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #downloadBtn:hover {
-    background-color: #357abd;
+    background-color: var(--button-hover);
 }
 
 #downloadBtn:disabled {
@@ -183,4 +203,39 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    background: var(--button-hover);
+}
+
+/* 更新文字颜色 */
+.upload-content p,
+.file-info,
+.preview-box h3 {
+    color: var(--text-color);
+}
+
+/* 更新卡片背景色 */
+.upload-container,
+.compression-settings,
+.preview-box {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
 } 
