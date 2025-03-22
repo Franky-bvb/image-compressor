@@ -1,0 +1,126 @@
+{
+  "games": [
+    {
+      "id": "tetris",
+      "title": "俄罗斯方块",
+      "description": "经典的俄罗斯方块游戏，考验你的空间思维和反应速度",
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=俄罗斯方块",
+      "iframeUrl": "https://games.gameexample.com/tetris/index.html",
+      "category": "puzzle",
+      "tags": ["益智", "经典"],
+      "popularity": 95,
+      "dateAdded": "2023-01-15",
+      "instructions": "使用方向键控制方块，上键旋转，下键加速，空格键直接落下。尽可能多地消除行数获得高分。",
+      "tips": [
+        "提前规划方块的放置位置",
+        "保持左侧或右侧的一列干净，便于放置长条",
+        "避免在中间留下空洞"
+      ]
+    },
+    {
+      "id": "snake",
+      "title": "贪吃蛇",
+      "description": "控制蛇吃食物并不断变长，避免撞墙或咬到自己",
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=贪吃蛇",
+      "iframeUrl": "https://games.gameexample.com/snake/index.html",
+      "category": "action",
+      "tags": ["动作", "经典"],
+      "popularity": 88,
+      "dateAdded": "2023-02-10",
+      "instructions": "使用方向键控制蛇的移动方向。吃到食物后蛇会变长，碰到墙壁或自己的身体则游戏结束。",
+      "tips": [
+        "尽量保持蛇的活动空间，避免被自己围困",
+        "预判食物的位置，提前规划路线",
+        "控制好蛇的移动节奏，避免手忙脚乱"
+      ]
+    },
+    {
+      "id": "2048",
+      "title": "2048",
+      "description": "合并相同数字，得到2048并取得胜利",
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=2048",
+      "iframeUrl": "https://games.gameexample.com/2048/index.html",
+      "category": "puzzle",
+      "tags": ["益智", "数字"],
+      "popularity": 92,
+      "dateAdded": "2023-03-05",
+      "instructions": "使用方向键滑动所有方块，相同数字的方块相撞会合并成它们的和。目标是创建一个2048的方块。",
+      "tips": [
+        "把大数字保持在角落",
+        "尽量沿一个方向移动，保持数字有序",
+        "避免小数字散布在棋盘上"
+      ]
+    },
+    {
+      "id": "flappy-bird",
+      "title": "像素鸟",
+      "description": "控制小鸟飞行，躲避障碍物，看看你能飞多远",
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=像素鸟",
+      "iframeUrl": "https://games.gameexample.com/flappy-bird/index.html",
+      "category": "action",
+      "tags": ["动作", "技巧"],
+      "popularity": 85,
+      "dateAdded": "2023-03-20",
+      "instructions": "点击屏幕或按空格键使小鸟飞行，避开绿色管道。每通过一对管道得一分。",
+      "tips": [
+        "保持点击的节奏感，避免过快或过慢",
+        "专注于下一个缺口的位置",
+        "不要慌张，保持冷静和耐心"
+      ]
+    },
+    {
+      "id": "tower-defense",
+      "title": "塔防游戏",
+      "description": "建造防御塔，阻止敌人入侵你的领地",
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=塔防游戏",
+      "iframeUrl": "https://games.gameexample.com/tower-defense/index.html",
+      "category": "strategy",
+      "tags": ["策略", "防御"],
+      "popularity": 89,
+      "dateAdded": "2023-04-15",
+      "instructions": "点击地图放置防御塔，升级塔以增强攻击力。不同的塔有不同的攻击方式和范围。阻止敌人到达终点。",
+      "tips": [
+        "优先防守关键路径",
+        "合理分配资源升级防御塔",
+        "了解不同敌人的弱点，针对性防御"
+      ]
+    },
+    {
+      "id": "chess",
+      "title": "国际象棋",
+      "description": "经典的国际象棋游戏，考验你的战略思维",
+      "thumbnailUrl": "https://via.placeholder.com/300x200?text=国际象棋",
+      "iframeUrl": "https://games.gameexample.com/chess/index.html",
+      "category": "strategy",
+      "tags": ["策略", "棋类"],
+      "popularity": 87,
+      "dateAdded": "2023-05-10",
+      "instructions": "按照国际象棋规则移动棋子，吃掉对手的棋子并将死对方的王。",
+      "tips": [
+        "开局控制中心位置",
+        "保护你的王，积极进攻对手的王",
+        "学习基本的棋子配合和战术"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "puzzle",
+      "name": "益智游戏",
+      "description": "锻炼大脑，解决谜题，提高逻辑思维",
+      "color": "green"
+    },
+    {
+      "id": "action",
+      "name": "动作游戏",
+      "description": "测试反应速度和灵敏度的快节奏游戏",
+      "color": "red"
+    },
+    {
+      "id": "strategy",
+      "name": "策略游戏",
+      "description": "需要深思熟虑和策略规划的游戏",
+      "color": "blue"
+    }
+  ]
+} 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏详情 - 游戏天地</title>
+    <meta name="description" content="体验精彩的在线小游戏">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-xl">游戏天地</a>
+            <div class="space-x-4 hidden md:block">
+                <a href="category.html?type=puzzle" class="hover:underline">益智游戏</a>
+                <a href="category.html?type=action" class="hover:underline">动作游戏</a>
+                <a href="category.html?type=strategy" class="hover:underline">策略游戏</a>
+                <a href="blog.html" class="hover:underline">游戏攻略</a>
+                <a href="about.html" class="hover:underline">关于我们</a>
+            </div>
+            <button id="mobileMenuButton" class="md:hidden text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="hidden md:hidden container mx-auto mt-2 space-y-2">
+            <a href="category.html?type=puzzle" class="block hover:bg-blue-700 p-2 rounded">益智游戏</a>
+            <a href="category.html?type=action" class="block hover:bg-blue-700 p-2 rounded">动作游戏</a>
+            <a href="category.html?type=strategy" class="block hover:bg-blue-700 p-2 rounded">策略游戏</a>
+            <a href="blog.html" class="block hover:bg-blue-700 p-2 rounded">游戏攻略</a>
+            <a href="about.html" class="block hover:bg-blue-700 p-2 rounded">关于我们</a>
+        </div>
+    </nav>
+    
+    <!-- 内容区域 -->
+    <main class="container mx-auto p-4 flex-grow">
+        <!-- 游戏信息 -->
+        <div id="gameContainer" class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <!-- 游戏数据加载中占位符 -->
+            <div id="gameLoading">
+                <div class="animate-pulse">
+                    <div class="h-8 bg-gray-300 rounded w-3/4 mb-4"></div>
+                    <div class="h-80 bg-gray-300 rounded mb-4"></div>
+                    <div class="h-4 bg-gray-300 rounded w-1/2 mb-2"></div>
+                    <div class="h-4 bg-gray-300 rounded w-full mb-2"></div>
+                    <div class="h-4 bg-gray-300 rounded w-4/5"></div>
+                </div>
+            </div>
+            
+            <!-- 游戏内容 (由JavaScript动态填充) -->
+            <div id="gameContent" class="hidden">
+                <h1 id="gameTitle" class="text-2xl font-bold mb-4">游戏标题</h1>
+                <div class="mb-6">
+                    <div id="gameFrame" class="bg-gray-200 p-2 rounded">
+                        <!-- 游戏iframe将在这里动态插入 -->
+                    </div>
+                </div>
+                <div class="prose max-w-none">
+                    <h2 class="text-xl font-semibold">游戏介绍</h2>
+                    <p id="gameDescription">游戏介绍内容...</p>
+                    
+                    <h2 class="text-xl font-semibold mt-4">游戏玩法</h2>
+                    <p id="gameInstructions">游戏玩法说明...</p>
+                    
+                    <div id="gameTips" class="mt-4">
+                        <h2 class="text-xl font-semibold">游戏技巧</h2>
+                        <ul id="tipsList">
+                            <!-- 技巧列表将在这里动态插入 -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 相关游戏 -->
+        <div class="mt-6">
+            <h3 class="text-lg font-semibold border-b pb-2 mb-4">相关游戏</h3>
+            <div id="relatedGames" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- 相关游戏卡片将由JavaScript动态生成 -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">游戏天地</h3>
+                    <p class="text-gray-400">提供最好玩的在线小游戏体验</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">快速链接</h3>
+                    <ul class="space-y-1 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">首页</a></li>
+                        <li><a href="category.html?type=puzzle" class="hover:text-white">益智游戏</a></li>
+                        <li><a href="category.html?type=action" class="hover:text-white">动作游戏</a></li>
+                        <li><a href="blog.html" class="hover:text-white">游戏攻略</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">联系我们</h3>
+                    <p class="text-gray-400">有问题或建议? 请联系我们</p>
+                    <a href="mailto:contact@yourgamesite.com" class="text-blue-400 hover:underline">contact@yourgamesite.com</a>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 游戏天地 - 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/router.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/game-detail.js"></script>
+</body>
+</html> 

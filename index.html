@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏天地 - 免费在线小游戏</title>
+    <meta name="description" content="游戏天地提供各种有趣的免费在线小游戏，包括益智类、动作类、策略类等多种游戏类型">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 自定义CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-blue-600 text-white p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-bold text-xl">游戏天地</a>
+            <div class="space-x-4 hidden md:block">
+                <a href="category.html?type=puzzle" class="hover:underline">益智游戏</a>
+                <a href="category.html?type=action" class="hover:underline">动作游戏</a>
+                <a href="category.html?type=strategy" class="hover:underline">策略游戏</a>
+                <a href="blog.html" class="hover:underline">游戏攻略</a>
+                <a href="about.html" class="hover:underline">关于我们</a>
+            </div>
+            <button id="mobileMenuButton" class="md:hidden text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobileMenu" class="hidden md:hidden container mx-auto mt-2 space-y-2">
+            <a href="category.html?type=puzzle" class="block hover:bg-blue-700 p-2 rounded">益智游戏</a>
+            <a href="category.html?type=action" class="block hover:bg-blue-700 p-2 rounded">动作游戏</a>
+            <a href="category.html?type=strategy" class="block hover:bg-blue-700 p-2 rounded">策略游戏</a>
+            <a href="blog.html" class="block hover:bg-blue-700 p-2 rounded">游戏攻略</a>
+            <a href="about.html" class="block hover:bg-blue-700 p-2 rounded">关于我们</a>
+        </div>
+    </nav>
+    
+    <!-- 内容区域 -->
+    <main class="container mx-auto p-4 flex-grow">
+        <!-- 首页横幅 -->
+        <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg shadow-md p-6 mb-6">
+            <h1 class="text-3xl font-bold mb-2">欢迎来到游戏天地</h1>
+            <p class="text-xl">发现和体验各种有趣的在线小游戏</p>
+        </div>
+        
+        <!-- 热门游戏 -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">热门游戏</h2>
+            <div id="featuredGames" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- 游戏卡片将由JS动态生成 -->
+                <div class="animate-pulse bg-white rounded shadow-md p-4 h-64">
+                    <div class="bg-gray-300 h-32 rounded mb-4"></div>
+                    <div class="bg-gray-300 h-6 rounded mb-2"></div>
+                    <div class="bg-gray-300 h-4 rounded w-3/4 mb-2"></div>
+                    <div class="bg-gray-300 h-4 rounded w-1/2"></div>
+                </div>
+                <!-- 更多占位符... -->
+            </div>
+        </section>
+        
+        <!-- 游戏分类 -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">游戏分类</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="category.html?type=puzzle" class="bg-green-500 text-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-2">益智游戏</h3>
+                    <p>锻炼你的大脑，解决谜题和挑战</p>
+                </a>
+                <a href="category.html?type=action" class="bg-red-500 text-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-2">动作游戏</h3>
+                    <p>测试你的反应速度和技巧</p>
+                </a>
+                <a href="category.html?type=strategy" class="bg-blue-500 text-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-bold mb-2">策略游戏</h3>
+                    <p>规划、建设和征服的战略挑战</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- 最新游戏 -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold mb-4 border-b pb-2">最新游戏</h2>
+            <div id="newGames" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- 游戏卡片将由JS动态生成 -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">游戏天地</h3>
+                    <p class="text-gray-400">提供最好玩的在线小游戏体验</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">快速链接</h3>
+                    <ul class="space-y-1 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">首页</a></li>
+                        <li><a href="category.html?type=puzzle" class="hover:text-white">益智游戏</a></li>
+                        <li><a href="category.html?type=action" class="hover:text-white">动作游戏</a></li>
+                        <li><a href="blog.html" class="hover:text-white">游戏攻略</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">联系我们</h3>
+                    <p class="text-gray-400">有问题或建议? 请联系我们</p>
+                    <a href="mailto:contact@yourgamesite.com" class="text-blue-400 hover:underline">contact@yourgamesite.com</a>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 游戏天地 - 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/router.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
